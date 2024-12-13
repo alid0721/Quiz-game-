@@ -22,8 +22,178 @@
             point possible, good luck. (p.s you'll need it)
         </p>
     </section>
-    <label>Enter your name bellow
-    <input type="text" id="nameInput" placeholder="enter your nickname here example:AAA"></label>
-    <button onclick="" id="secNextButton">Next ==></button>
+    <label for="nameInput">Enter your name bellow</label>
+    <input type="text" id="nameInput" placeholder="enter your nickname here example:AAA">
+    <button onclick="" id="nextButton">Next ==></button>
+    <section>
+        <h3>Genre Selection</h3>
+        <h5>PLease select one of the Question topics bellow:</h5>
+        <div class="row">
+            <div class="Genre name">STEM</div>
+            <div class="Genre name">History</div>
+        </div>
+        <div class="row">
+            <div class="Genre name">Literature</div>
+            <div class="Genre name">Geography</div>
+        </div>
+    </section>
+    <section id="Stem Questions">
+        <h3>Stem Questions</h3>
+        <div>
+            <h5>Q1) what is 34^2?</h5>
+            <div id="Q1 answers">
+            <button onclick="console.log(`button 1 clicked`)" id="Q1B1">A. 1156</button>
+            <button onclick="console.log(`button 2 clicked`)" id="Q1B2">B. 1521</button>
+            <button onclick="console.log(`button 3 clicked`)" id="Q1B3">C. 1849</button>
+            <button onclick="console.log(`button 4 clicked`)" id="Q1B4">D. 900</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q2) A ball is thrown vertically upward with an initial velocity of 20 m/s. What is the maximum height reached by the ball? (Assume acceleration due to gravity is 
+                9.8m/s<sup>2</sup>, and air resistance is negligible.)</h5>
+            <div id="Q2 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q2B1">A. 20 m</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q2B2">B. 30 m</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q2B3">C. 40 m</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q2B4">D. 50 m</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q3) Which of the following represents the correct molecular formula for glucose?</h5>
+            <div id="Q3 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q3B1">A. C<sub>2</sub>H<sub>6</sub>O<sub>2</sub></button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q3B2">B. C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q3B3">C. C<sub>5</sub>H<sub>10</sub>O<sub>6</sub></button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q3B4">D. C<sub>3</sub>H<sub>8</sub>O<sub>3</sub></button>
+            </div>
+        </div>
+        <div>
+            <h5>Q4) Which of the following correctly identifies the role of a primary consumer in a food chain?</h5>
+            <div id="Q4 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q4B1">A. It produces energy through photosynthesis.</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q4B2">B. It consumes plants for energy.</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q4B3">C. It decomposes dead organic material.</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q4B4">D. It preys on other animals for energy.</button>
+            </div>
+        </div>
+    </section>
+    <section id="history">
+        <h3>History Questions</h3>
+        <div>
+            <h5>Q1) Which event marked the beginning of World War II?
+            </h5>
+            <div id="Q1 answers">
+            <button onclick="console.log(`button 1 clicked`)" id="Q1B1">A. The attack on Pearl Harbor</button>
+            <button onclick="console.log(`button 2 clicked`)" id="Q1B2">B. The assassination of Archduke Franz Ferdinand</button>
+            <button onclick="console.log(`button 3 clicked`)" id="Q1B3">C. Germany’s invasion of Poland</button>
+            <button onclick="console.log(`button 4 clicked`)" id="Q1B4">D. The signing of the Treaty of Versailles</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q2) What was the primary purpose of the Declaration of Independence?</h5>
+            <div id="Q2 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q2B1">A.To establish the U.S. Constitution</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q2B2">B. To demand an end to slavery</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q2B3">C. To declare the colonies’ independence from Britain</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q2B4">D. To create the Bill of Rights</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q3) Which civilization is credited with developing the first known system of writing?</h5>
+            <div id="Q3 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q3B1">A. Ancient Egypt</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q3B2">B. Mesopotamia</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q3B3">C. Indus Valley</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q3B4">D. Ancient Greece</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q4) What was the primary cause of the French Revolution?</h5>
+            <div id="Q4 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q4B1">A. Napoleon’s rise to power</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q4B2">B. Widespread famine and economic inequality</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q4B3">C. Conflict with the British</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q4B4">D. The fall of the Roman Empire</button>
+            </div>
+        </div>
+    </section>
+    <section id="literature">
+        <h3>Literature Questions</h3>
+        <div>
+            <h5>Q1) In William Shakespeare’s play Romeo and Juliet, who kills Tybalt?</h5>
+            <div id="Q1 answers">
+            <button onclick="console.log(`button 1 clicked`)" id="Q1B1">A. Romeo</button>
+            <button onclick="console.log(`button 2 clicked`)" id="Q1B2">B. Mercutio</button>
+            <button onclick="console.log(`button 3 clicked`)" id="Q1B3">C. C. Benvolio</button>
+            <button onclick="console.log(`button 4 clicked`)" id="Q1B4">D. Paris</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q2) Who wrote the novel The Great Gatsby?</h5>
+            <div id="Q2 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q2B1">A. Ernest Hemingway</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q2B2">B. F. Scott Fitzgerald</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q2B3">C. Mark Twain</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q2B4">D. John Steinbeck</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q3) Which novel begins with the line, "It was the best of times, it was the worst of times"?</h5>
+            <div id="Q3 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q3B1">A. Pride and Prejudice by Jane Austen</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q3B2">B. 1984 by George Orwell</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q3B3">C. A Tale of Two Cities by Charles Dickens</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q3B4">D. Wuthering Heights by Emily Brontë</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q4) Which poet is known for writing the line, “I took the one less traveled by”?</h5>
+            <div id="Q4 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q4B1">A. It produces energy through photosynthesis.</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q4B2">B. It consumes plants for energy.</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q4B3">C. It decomposes dead organic material.</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q4B4">D. It preys on other animals for energy.</button>
+            </div>
+        </div>
+    </section>
+    <section id="geography">
+        <h3>Geography Questions</h3>
+        <div>
+            <h5>Q1) Which continent is the largest by land area?</h5>
+            <div id="Q1 answers">
+            <button onclick="console.log(`button 1 clicked`)" id="Q1B1">A. Africa</button>
+            <button onclick="console.log(`button 2 clicked`)" id="Q1B2">B. Asia</button>
+            <button onclick="console.log(`button 3 clicked`)" id="Q1B3">C. North America</button>
+            <button onclick="console.log(`button 4 clicked`)" id="Q1B4">D. Antarctica</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q2) What is the longest river in the world?</h5>
+            <div id="Q2 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q2B1">A. Amazon River</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q2B2">B. Mississippi River</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q2B3">C. Nile River</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q2B4">D. Yangtze River</button>
+            </div>
+        </div>
+        <div>
+            <h5>Q3) Which of the following cities is the capital of Canada?</h5>
+            <div id="Q3 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q3B1">A. Toronto</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q3B2">B. Ottawa</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q3B3">C. Vancouver</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q3B4">D. Montreal</button>
+            </div>
+        </div>
+        <div>
+            <h5>Which type of climate is characterized by hot, dry summers and mild, wet winters?</h5>
+            <div id="Q4 answers">
+                <button onclick="console.log(`button 1 clicked`)" id="Q4B1">A. Tropical Rainforest</button>
+                <button onclick="console.log(`button 2 clicked`)" id="Q4B2">B. Mediterranean</button>
+                <button onclick="console.log(`button 3 clicked`)" id="Q4B3">C. Desert</button>
+                <button onclick="console.log(`button 4 clicked`)" id="Q4B4">D. Tundra</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

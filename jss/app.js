@@ -6,6 +6,7 @@
     //playerName=''
 //})
 //console.log(currentPlayer)
+
 const playerName="Ali"
 const Genres=["stem","history","language","geography"]
 
@@ -14,8 +15,8 @@ function init(){
     let numOfLives=3
     let numCompleted=0
     let prevLives=numOfLives
-    genreSelector()
-    livesChecker()
+    genreSelector(score)
+    livesChecker(prevLives,numOfLives,score)
     
 }
 function chooseGenre(){
@@ -26,7 +27,7 @@ function chooseGenre(){
         }
     }
 }
-function genreSelector(){
+function genreSelector(score){
     let currGenre=chooseGenre()
     if (currGenre==="stem"){
         score=score+stemQuestions()
@@ -39,7 +40,7 @@ function genreSelector(){
     }
     
 }
-function livesChecker(){
+function livesChecker(prevLives,numOfLives,score){
     if (prevLives!=numOfLives && numCompleted!=4 && numOfLives!=0){
         genreSelector()
     }else{
