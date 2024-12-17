@@ -25,7 +25,7 @@ function init(){
         playerDAta.playerName=nameInput.value
         //console.log(playerDAta)
         nameInput.value=""
-        console.log(playerDAta)
+        //console.log(playerDAta)
         genreSelector(playerDAta)
     })
     
@@ -50,20 +50,20 @@ function genreSelector(playerDAta){
         button.addEventListener("click",()=>{
             playerDAta.genre=button.textContent
             if (playerDAta.genre==="Stem"&&playerDAta.numCompleted!=4){
-                console.log(playerDAta.genre)
-                 console.log(playerDAta.numCompleted)
+                //console.log(playerDAta.genre)
+                //console.log(playerDAta.numCompleted)
                 stemQuestions(playerDAta)
             } else if (playerDAta.genre==="History"&&playerDAta.numCompleted!=4){
-                console.log(playerDAta.genre)
-                console.log(playerDAta.numCompleted)
+                //console.log(playerDAta.genre)
+                //console.log(playerDAta.numCompleted)
                 histQuestions(playerDAta)
             } else if (playerDAta.genre==="Literature"&&playerDAta.numCompleted!=4){
-                console.log(playerDAta.genre)
-                console.log(playerDAta.numCompleted)
+                //console.log(playerDAta.genre)
+                //console.log(playerDAta.numCompleted)
                 litQuestions(playerDAta)
             }else if (playerDAta.genre==="Geography"&&playerDAta.numCompleted!=4){
-                console.log(playerDAta.genre)
-                console.log(playerDAta.numCompleted)
+                //console.log(playerDAta.genre)
+                //console.log(playerDAta.numCompleted)
                 geoQuestions(playerDAta)
             }else{
                 display(playerDAta.playerName,playerDAta.score)
@@ -71,13 +71,13 @@ function genreSelector(playerDAta){
         })
     })
 } 
-function livesChecker(prevLives,playerDAta){
-    if (prevLives!=playerDAta.livesCount && playerDAta.numCompleted!=4 && playerDAta.livesCount!=0){
-        genreSelector()
-    }else{
-        display(playerDAta.playerName,playerDAta.score)
-    }
-}
+// function livesChecker(prevLives,playerDAta){
+//     if (prevLives!=playerDAta.livesCount && playerDAta.numCompleted!=4 && playerDAta.livesCount!=0){
+//         genreSelector()
+//     }else{
+//         display(playerDAta.playerName,playerDAta.score)
+//     }
+// }
 function stemQuestions(data){
     const q1Buttons=document.querySelectorAll("#Q1")
     const q2Buttons=document.querySelectorAll("#Q2")
@@ -95,10 +95,10 @@ function stemQuestions(data){
             if (button.textContent==="A. x= 2 and x= 3"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -119,10 +119,10 @@ function stemQuestions(data){
             if (button.textContent==="A. 20 m"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -143,10 +143,10 @@ function stemQuestions(data){
             if (button.innerHTML==="B. C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -168,11 +168,11 @@ function stemQuestions(data){
                 //console.log(button.textContent)
                 data.score+=10
                 data.numCompleted+=1
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}, good job on clearing this section please choose a new topic`
                 genreSelector(data)
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -199,10 +199,10 @@ function histQuestions(data){
             if (button.textContent==="C. Germany’s invasion of Poland"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -223,10 +223,10 @@ function histQuestions(data){
             if (button.textContent==="C. To declare the colonies’ independence from Britain"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -247,10 +247,10 @@ function histQuestions(data){
             if (button.innerHTML==="B. Mesopotamia"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -272,11 +272,11 @@ function histQuestions(data){
                 //console.log(button.textContent)
                 data.score+=10
                 data.numCompleted+=1
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}, good job on clearing this section please choose a new topic`
                 genreSelector(data)
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -303,10 +303,10 @@ function litQuestions(data){
             if (button.textContent==="A. Romeo"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -327,10 +327,10 @@ function litQuestions(data){
             if (button.textContent==="B. F. Scott Fitzgerald"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -351,10 +351,10 @@ function litQuestions(data){
             if (button.innerHTML==="C. A Tale of Two Cities by Charles Dickens"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -376,11 +376,11 @@ function litQuestions(data){
                 //console.log(button.textContent)
                 data.score+=10
                 data.numCompleted+=1
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}, good job on clearing this section please choose a new topic`
                 genreSelector(data)
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+               msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -407,10 +407,10 @@ function geoQuestions(data){
             if (button.textContent==="B. Asia"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -431,10 +431,10 @@ function geoQuestions(data){
             if (button.textContent==="C. Nile River"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -455,10 +455,10 @@ function geoQuestions(data){
             if (button.innerHTML==="B. Ottawa"){
                 //console.log(button.textContent)
                 data.score+=10
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}`
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
@@ -480,11 +480,11 @@ function geoQuestions(data){
                 //console.log(button.textContent)
                 data.score+=10
                 data.numCompleted+=1
-                console.log(data.score)
+                msgElement.textContent=`Answered correctly!! current score is ${data.score}, good job on clearing this section please choose a new topic`
                 genreSelector(data)
             }else{
                 data.livesCount-=1
-                console.log(data.livesCount)
+                msgElement.textContent=`Incorrect answer number of lives remaining is ${data.livesCount}`
                 if (data.livesCount===0){
                     display(data.playerName,data.score)
                 }else{
