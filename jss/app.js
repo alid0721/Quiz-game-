@@ -10,6 +10,9 @@
 //const Genres=["stem","history","language","geography"]
 
 const msgElement= document.querySelector("#message")
+const h1Element=document.querySelector("#H1")
+const h51Element=document.querySelector("#H51")
+const h52Element=document.querySelector("H52")
 function init(){
     const playerDAta={
         playerName:"",
